@@ -24,21 +24,22 @@ In this exercise we will show you how to create a brand new Microsoft Sentinel w
 
 ![deployment](../Images/deployment2.png)
 
-1. In the Create Log Analytics workspace page, fill out the form as follows:
-   * **Subscription**: choose the Azure subscription where you would like to deploy the Microsoft Sentinel workspace
-   * **Resource Group**: select an existing resource group or create a new resource group (recommended) that will host the lab resources
-   * **Region**: from the drop down, select the Azure region where the lab will be located
-   * **Workspace Name**: provide a name for the Microsoft Sentinel workspace. Please note that the workspace name should include 4-63 letters, digits or '-'. The '-' shouldn't be the first or the last symbol
+6\. In the Create Log Analytics workspace page, fill out the form as follows:
+
+* **Subscription**: choose the Azure subscription where you would like to deploy the Microsoft Sentinel workspace
+* **Resource Group**: select an existing resource group or create a new resource group (recommended) that will host the lab resources
+* **Region**: from the drop down, select the Azure region where the lab will be located
+* **Workspace Name**: provide a name for the Microsoft Sentinel workspace. Please note that the workspace name should include 4-63 letters, digits or '-'. The '-' shouldn't be the first or the last symbol
 
 ![deployment](../Images/deployment3.png)
 
-Click **Review + create** and then **Create** after the validation completes. The creation takes a few seconds.
+8\. Click **Review + create** and then **Create** after the validation completes. The creation takes a few seconds.
 
-1. You will be redirected back to the _Add Microsoft Sentinel to a workspace_. Type the name of your new workspace in the search box, select your workspace and click **Add** at the bottom.
+9\. You will be redirected back to the _Add Microsoft Sentinel to a workspace_. Type the name of your new workspace in the search box, select your workspace and click **Add** at the bottom.
 
 ![deployment](../Images/deployment4.png)
 
-1. Your Microsoft Sentinel workspace is now ready to use!
+Your Microsoft Sentinel workspace is now ready to use!
 
 ### Exercise 2: Deploy the Microsoft Sentinel Training Lab Solution
 
