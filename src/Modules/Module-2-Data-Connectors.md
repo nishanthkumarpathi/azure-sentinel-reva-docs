@@ -1,7 +1,4 @@
-# Module 2 - Data Connectors
-
-#### 🎓 Level: 100 (Beginner)
-#### ⌛ Estimated time to complete this lab: 15 minutes
+# Data Connectors
 
 ## Objectives
 
@@ -17,23 +14,20 @@ Some of the data connectors that will be used in this lab, require some specific
 
 This exercise shows you how to enable the Azure Activity data connector. This connector will bring into your Microsoft Sentinel workspace all the audit events for actions performed in your Azure subscription.
 
-**NOTE**: To do this exercise, your user must have Reader permissions to any subscription which logs you want to stream into Microsoft Sentinel. 
+**NOTE**: To do this exercise, your user must have Reader permissions to any subscription which logs you want to stream into Microsoft Sentinel.
 
 1. Go to you Microsoft Sentinel workspace and select **Data Connectors** under **Configuration** section.
 
 ![azactivity1](../Images/azactivity1.png)
 
-2. In the data connectors screen, type **actvity** in the search bar, select the **Azure Activity** connector and click on **Open connector page**.
+1. In the data connectors screen, type **actvity** in the search bar, select the **Azure Activity** connector and click on **Open connector page**.
 
 ![azactivity2](../Images/azactivity2.png)
 
-3. In the Azure Activity connector page, go to option number 2 **Connect your subscriptions through diagnostic settings new pipeline**. This method leverages Azure Policy and it brings many improvements compared to the old method (more details about these improvements can be found [here](https://techcommunity.microsoft.com/t5/azure-sentinel/moving-azure-activity-connector-to-an-improved-method/ba-p/2479552)).
-
-
-4. Click on the **Launch Azure Policy Assignment wizard**, this will redirect you to the policy creation page.
+1. In the Azure Activity connector page, go to option number 2 **Connect your subscriptions through diagnostic settings new pipeline**. This method leverages Azure Policy and it brings many improvements compared to the old method (more details about these improvements can be found [here](https://techcommunity.microsoft.com/t5/azure-sentinel/moving-azure-activity-connector-to-an-improved-method/ba-p/2479552)).
+2. Click on the **Launch Azure Policy Assignment wizard**, this will redirect you to the policy creation page.
 
 ![azactivity3](../Images/azactivity33.png)
-
 
 On the Scope selection select your relevant subscription.
 
@@ -41,18 +35,16 @@ On the Scope selection select your relevant subscription.
 
 ![azactivity4](../Images/m2-activity-scope.png)
 
-5. Go to the **Parameters** tab. On the **Primary Log Analytics workspace** select the Microsoft Sentinel workspace:
+1. Go to the **Parameters** tab. On the **Primary Log Analytics workspace** select the Microsoft Sentinel workspace:
 
 ![azactivity8](../Images/m2-ws-target-foractivitylogs1.png)
 
-
-6. Press **Review and Create** to save this policy and **Create**.
-
-7. Click on **Next Steps**. Here you see what content is available for the telemetry that is brought into Sentinel by this connector, like Workbooks, Query samples and Analytics Rules.
+1. Press **Review and Create** to save this policy and **Create**.
+2. Click on **Next Steps**. Here you see what content is available for the telemetry that is brought into Sentinel by this connector, like Workbooks, Query samples and Analytics Rules.
 
 ![azactivity7](../Images/azactivity7.png)
 
-8. It is normal if you don't immediately see the connector showing as connected and in green. Also, each subscription has a maximum of 5 destinations for its activity logs. If this limit is already reached, the policy created as part of this exercise won't be able to add an additional destination to your Microsoft Sentinel workspace.
+1. It is normal if you don't immediately see the connector showing as connected and in green. Also, each subscription has a maximum of 5 destinations for its activity logs. If this limit is already reached, the policy created as part of this exercise won't be able to add an additional destination to your Microsoft Sentinel workspace.
 
 ### Exercise 2: Enable Microsoft Defender for Cloud data connector
 
@@ -60,17 +52,14 @@ This exercise shows you how to enable the Microsoft Defender for Cloud data conn
 
 **NOTE**: To do this exercise, your user must have the Security Reader role in the subscription of the logs you stream. If not done already, you will need to enable any of the Defender plans in Microsoft Defender for Cloud.
 
-1. Go to you Microsoft Sentinel workspace and select **Data Connectors** under *Configuration* section.
-
-2. In the data connectors screen, type *defender* in the search bar, select the *Microsoft Defender for Cloud* connector and click on *Open connector page*.
-
+1. Go to you Microsoft Sentinel workspace and select **Data Connectors** under _Configuration_ section.
+2. In the data connectors screen, type _defender_ in the search bar, select the _Microsoft Defender for Cloud_ connector and click on _Open connector page_.
 3. In the Microsoft Defender for Cloud connector page, check that your permissions are enough at the top. If you don't have the required permissions, you can continue to the next exercise.
-
-4. From the list of subscriptions at the bottom of the page, select the desired subscription an click on *Connect*. Wait for the operation to complete.
+4. From the list of subscriptions at the bottom of the page, select the desired subscription an click on _Connect_. Wait for the operation to complete.
 
 ![azdefender1](../Images/azdefender1.png)
 
-5. Click on *Next Steps* at the top of the page and explore what content is available for this connector.
+1. Click on _Next Steps_ at the top of the page and explore what content is available for this connector.
 
 ### Exercise 3: Enable Threat Intelligence TAXII data connector
 
@@ -78,24 +67,20 @@ This exercise shows you how to enable the Threat Intelligence - TAXII data conne
 
 **NOTE**: To do this exercise, your user must have the Security Reader role in the subscription of the logs you stream. If not done already, you will need to enable Azure Defender within Azure Security Center.
 
-1. Go to you Microsoft Sentinel workspace and select *Data Connectors* under *Configuration* section.
-
-2. In the data connectors screen, type *taxii* in the search bar, select the *Threat intelligence - TAXII* connector and click on *Open connector page*.
-
-3. In the Threat Intelligence - TAXII connector page, add the following information under *Configuration* menu:
-
-    - **Friendly name (for server)**: RansomwareIPs
-    - **API root URL**: https://limo.anomali.com/api/v1/taxii2/feeds/
-    - **Collection ID**: 135
-    - **Username**: guest
-    - **Password**: guest
-    - **Import Indicators**: All available (review all available options)
-    - **Polling frequency**: Once an minute (review all available options)
+1. Go to you Microsoft Sentinel workspace and select _Data Connectors_ under _Configuration_ section.
+2. In the data connectors screen, type _taxii_ in the search bar, select the _Threat intelligence - TAXII_ connector and click on _Open connector page_.
+3. In the Threat Intelligence - TAXII connector page, add the following information under _Configuration_ menu:
+   * **Friendly name (for server)**: RansomwareIPs
+   * **API root URL**: https://limo.anomali.com/api/v1/taxii2/feeds/
+   * **Collection ID**: 135
+   * **Username**: guest
+   * **Password**: guest
+   * **Import Indicators**: All available (review all available options)
+   * **Polling frequency**: Once an minute (review all available options)
 
 ![taxii1](../Images/taxii11.png)
 
-4. Click *Add* and wait until the operation completes.
+1. Click _Add_ and wait until the operation completes.
+2. Click on _Next Steps_ at the top of the page and explore what content is available for this connector. In a few seconds, the ThreatIntelligenceIndicator will be populated with IOCs from Anomali's feed.
 
-5. Click on *Next Steps* at the top of the page and explore what content is available for this connector. In a few seconds, the ThreatIntelligenceIndicator will be populated with IOCs from Anomali's feed.
-
-**Congratulations, you have completed Module 2!**. You can now continue to **[Module 3 - Analytics Rules](./Module-3-Analytics-Rules.md)**
+You can now continue to [**Module 3 - Analytics Rules**](Module-3-Analytics-Rules.md)
