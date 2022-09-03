@@ -68,7 +68,13 @@ In the below example we are seeing 2 low severity alerts from **Azure Active Dir
 
 ### Exercise 4: Create Microsoft Sentinel custom analytics rule
 
-Your Security consult notify you about this thread https://www.reddit.com/r/sysadmin/comments/7kyp0a/recent\_phishing\_attempts\_my\_experience\_and\_what/ Base on the attack vector and the organization risk he recommend you to create detection rule for this malicious activity. In this exercise you will use Microsoft Sentinel analytics rule wizard to create new detection.
+Your Security consult notify you about this thread&#x20;
+
+{% embed url="https://www.reddit.com/r/sysadmin/comments/7kyp0a/recent_phishing_attempts_my_experience_and_what/" %}
+Exercise
+{% endembed %}
+
+&#x20;Base on the attack vector and the organization risk he recommend you to create detection rule for this malicious activity. In this exercise you will use Microsoft Sentinel analytics rule wizard to create new detection.
 
 1. Review the article in the above link and understand what is the data source that will be part of the detection.
 2. Check if this operation are capture as part of your collection strategy:
