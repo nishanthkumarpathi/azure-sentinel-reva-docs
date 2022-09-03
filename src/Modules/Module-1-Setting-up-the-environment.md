@@ -18,7 +18,7 @@ In this exercise we will show you how to create a brand new Microsoft Sentinel w
 2. In the top search bar, type _Microsoft Sentinel_ and click on **Microsoft Sentinel**.
 3.
 
-    <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 4. In the Microsoft Sentinel screen, click **Create** at the top left.
 5. You can choose to add Microsoft Sentinel to an existing Log Analytics workspace or build a new one. We will create a new one, so click on **Create a new workspace**.
 
@@ -48,13 +48,15 @@ In this exercise you will deploy the Training Lab solution into your existing wo
 
 <figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 2\. In the Search Bar, Enter "Training Lab" .
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 3\. Make Sure you Click on Install.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Exercise 3: Configure Microsoft Sentinel Playbook
 
