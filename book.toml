@@ -3,7 +3,7 @@ authors = ["Nishanth Kumar"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Lab Document Structure Template"
+title = "Azure Sentinel"
 
 
 [output.html]
