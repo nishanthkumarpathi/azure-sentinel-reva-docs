@@ -44,22 +44,17 @@ Click **Review + create** and then **Create** after the validation completes. Th
 
 In this exercise you will deploy the Training Lab solution into your existing workspace. This will ingest pre-recorded data (\~20 MBs) and create several other artifacts that will be used during the exercises.
 
-1. In the Azure Portal, go to the top search bar and type _Microsoft Sentinel Training_. Select the **Microsoft Sentinel Training Lab Solution (Preview)** marketplace item on the right.
+1. Go to your SEntinel Overview Section and Under Content Management, Select Content Hub.
 
-![deployment](../Images/deployment5.png)
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-1. Read the solution description and click **Create** at the top.
+2\. In the Search Bar, Enter "Training Lab" .
 
-![deployment](../Images/deployment6.png)
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-1. In the Basics tab, select the Subscription, Resource Group and Workspace that you created in Exercise 1, or the details for your existing workspace. Optionally, review the different tabs (Workbooks, Analytics, Hunting Queries, Watchlists, Playbooks) in the solution. When ready, click on **Review + create**.
+3\. Make Sure you Click on Install.
 
-![deployment](../Images/deployment7.png)
-
-1. Once validation is ok, click on **Create**. The deployment process takes **about 15 minutes**, this is because we want to make sure that all the ingested data is ready for you to use once finished.
-2. Once the deployment finishes, you can go back to Microsoft Sentinel and select your workspace. In the home page you should see some ingested data and several recent incidents. Don't worry if you don't see 3 incidents like in the screenshot below, they might take a few minutes to be raised.
-
-![deployment](../Images/deployment8.png)
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Exercise 3: Configure Microsoft Sentinel Playbook
 
