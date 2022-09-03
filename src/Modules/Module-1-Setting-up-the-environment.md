@@ -16,11 +16,11 @@ In this exercise we will show you how to create a brand new Microsoft Sentinel w
 
 1. Navigate to the [Azure Portal](http://portal.azure.com) and log in with your account.
 2. In the top search bar, type _Microsoft Sentinel_ and click on **Microsoft Sentinel**.
+3.
 
-![deployment](../Images/deployment1.png)
-
-1. In the Microsoft Sentinel screen, click **Create** at the top left.
-2. You can choose to add Microsoft Sentinel to an existing Log Analytics workspace or build a new one. We will create a new one, so click on **Create a new workspace**.
+    <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+4. In the Microsoft Sentinel screen, click **Create** at the top left.
+5. You can choose to add Microsoft Sentinel to an existing Log Analytics workspace or build a new one. We will create a new one, so click on **Create a new workspace**.
 
 ![deployment](../Images/deployment2.png)
 
@@ -46,7 +46,7 @@ In this exercise you will deploy the Training Lab solution into your existing wo
 
 1. Go to your SEntinel Overview Section and Under Content Management, Select Content Hub.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 2\. In the Search Bar, Enter "Training Lab" .
 
