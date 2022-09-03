@@ -28,7 +28,7 @@ Below you can see all the [modules](./#Modules) that are part of this lab. Altho
 * [Enable Azure Defender data connector](Modules/Module-2-Data-Connectors.md#exercise-2-enable-azure-defender-data-connector)
 * [Enable Threat Intelligence TAXII data connector](Modules/Module-2-Data-Connectors.md#exercise-3-enable-threat-intelligence-taxii-data-connector)
 
-[**Module 3 – Analytics Rules**](Modules/Module-3-Analytics-Rules.md)
+<!-- [**Module 3 – Analytics Rules**](Modules/Module-3-Analytics-Rules.md)
 
 * [Analytics Rules overview](Modules/Module-3-Analytics-Rules.md#exercise-1-analytics-rules-overview)
 * [Enable Microsoft incident creation rule](Modules/Module-3-Analytics-Rules.md#exercise-2-enable-microsoft-incident-creation-rule)
@@ -67,4 +67,4 @@ Below you can see all the [modules](./#Modules) that are part of this lab. Altho
 
 * [Explore Microsoft Sentinel Content hub](Modules/Module-8-Azure-Sentinel-Solutions.md#exercise-1-explore-azure-sentinel-content-hub)
 * [Deploy a new solution](Modules/Module-8-Azure-Sentinel-Solutions.md#exercise-2-deploy-a-new-solution)
-* [Review and enable deployed artifacts](Modules/Module-8-Azure-Sentinel-Solutions.md#exercise-3-review-and-enable-deployed-artifacts)
+* [Review and enable deployed artifacts](Modules/Module-8-Azure-Sentinel-Solutions.md#exercise-3-review-and-enable-deployed-artifacts) -->
