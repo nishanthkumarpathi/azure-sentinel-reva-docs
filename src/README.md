@@ -51,12 +51,13 @@ Below you can see all the [modules](./#Modules) that are part of this lab. Altho
 * [Bookmarking hunting query results](Modules/Module-5-Hunting.md#exercise-2-Bookmarking-hunting-query-results)
 * [Promote a bookmark to an incident](Modules/Module-5-Hunting.md#exercise-3-Promote-a-bookmark-to-an-incident)
 
-<!-- 
 
 [**Module 6 – Watchlists**](Modules/Module-6-Watchlists.md)
 
 * [Create a Watchlist](Modules/Module-6-Watchlists.md#exercise-1-create-a-watchlist)
 * [Whitelist IP addresses in the analytics rule](Modules/Module-6-Watchlists.md#exercise-2-whitelist-ip-addresses-in-the-analytics-rule)
+
+<!-- 
 
 [**Module 7 - Threat Intelligence**](Modules/Module-7-Threat-Intelligence.md)
 
