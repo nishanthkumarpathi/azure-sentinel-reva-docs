@@ -11,12 +11,12 @@ This module assumes that you have completed [Module 1](Module-1-Setting-up-the-e
 As a SOC analyst, the entry point to consume Security incidents (tickets) in Sentinel is the Incident page.
 
 1. In the left navigation menu click on _Incidents_ to open the incidents page. This page will show by default all the open incidents in the last 24hr.
-2. When we want to change the time window, present only incident from specific severity or to see also closed incident, we can use the filters bar:
+1. When we want to change the time window, present only incident from specific severity or to see also closed incident, we can use the filters bar:
 
 ![Select Microsoft incident creation rule](../Images/m5-incident-filter.gif)
 
 1. On the incident page select the _Sign-ins from IPs that attempt sign-ins to disabled accounts_ incident. In the right pane you can see the incident preview with the high level information about the incident.
-2. As you are the SME SOC analyst that deal and investigate tickets, you need to take ownership on this incident. On the right pane, change the unassigned to _Assign to me_ and also change the status from _New_ to _Active_.
+1. As you are the SME SOC analyst that deal and investigate tickets, you need to take ownership on this incident. On the right pane, change the unassigned to _Assign to me_ and also change the status from _New_ to _Active_.
 
 ![Select Microsoft incident creation rule](../Images/m5-assigen\_ticket.gif)
 
