@@ -11,16 +11,16 @@ This module assumes that you have completed [Module 1](Module-1-Setting-up-the-e
 As a SOC analyst, the entry point to consume Security incidents (tickets) in Sentinel is the Incident page.
 
 1. In the left navigation menu click on _Incidents_ to open the incidents page. This page will show by default all the open incidents in the last 24hr.
-1. When we want to change the time window, present only incident from specific severity or to see also closed incident, we can use the filters bar:
+2. When we want to change the time window, present only incident from specific severity or to see also closed incident, we can use the filters bar:
 
 ![Select Microsoft incident creation rule](../Images/m5-incident-filter.gif)
 
-1. On the incident page select the _Sign-ins from IPs that attempt sign-ins to disabled accounts_ incident. In the right pane you can see the incident preview with the high level information about the incident.
+3. On the incident page select the _Sign-ins from IPs that attempt sign-ins to disabled accounts_ incident. In the right pane you can see the incident preview with the high level information about the incident.
 1. As you are the SME SOC analyst that deal and investigate tickets, you need to take ownership on this incident. On the right pane, change the unassigned to _Assign to me_ and also change the status from _New_ to _Active_.
 
 ![Select Microsoft incident creation rule](../Images/m5-assigen\_ticket.gif)
 
-1. Another way to consume incidents and also get high level view on the general SOC health is through the _Security efficiency workbook_.
+4. Another way to consume incidents and also get high level view on the general SOC health is through the _Security efficiency workbook_.
 
 We have 2 options to open the workbook:
 
@@ -32,7 +32,7 @@ We have 2 options to open the workbook:
 
 ![Select Microsoft incident creation rule](../Images/m5-SecurityOperationsEfficiency\_incident.gif)
 
-1. Review the dashboard.
+5. Review the dashboard.
 
 ### Exercise 2: Handling Incident **"Sign-ins from IPs that attempt sign-ins to disabled accounts"**
 
@@ -45,11 +45,11 @@ We have 2 options to open the workbook:
 
 ![Select Microsoft incident creation rule](../Images/m5-select\_events.gif)
 
-1. In raw log search, expend the received event and review the column and data we received, this properties will help us to decide if this incident is correlated to other events.
+7. In raw log search, expend the received event and review the column and data we received, this properties will help us to decide if this incident is correlated to other events.
 
 ![Select Microsoft incident creation rule](../Images/m5-evidence.gif)
 
-1. To get more context for this IP, we want to add GEO IP enrichment. In a real life SOC this operation will run automatically, but for this lab we want you to run it manually.
+8. To get more context for this IP, we want to add GEO IP enrichment. In a real life SOC this operation will run automatically, but for this lab we want you to run it manually.
 
 * Navigate back to the incident full page to the alert tab and scroll to the right
 
@@ -59,8 +59,8 @@ We have 2 options to open the workbook:
 
 ![Select Microsoft incident creation rule](../Images/m5-view\_playbooks.gif)
 
-1. Locate the playbook **Get-GeoFromIpAndTagIncident** and press **Run**. If the playbook is configured correctly, it should finish in a couple of seconds.
-2. Navigate back to the main incident page and notice to new tags that added to the incident.
+9. Locate the playbook **Get-GeoFromIpAndTagIncident** and press **Run**. If the playbook is configured correctly, it should finish in a couple of seconds.
+10. Navigate back to the main incident page and notice to new tags that added to the incident.
 
 ![Select Microsoft incident creation rule](../Images/m5-tags-incident.gif)
 
@@ -71,28 +71,28 @@ We have 2 options to open the workbook:
 
 ![Select Microsoft incident creation rule](../Images/m5-my-workbooks.gif)
 
-1. To open the **Investigation Insights - sentinel-training-ws** saved Workbook, in the right page press **View saved workbook**
-2. Validate that in the properties selector, your workspace is set on **sentinel-training-ws** and the subscription is the subscription that hosts your Microsoft Sentinel Lab.
+3. To open the **Investigation Insights - sentinel-training-ws** saved Workbook, in the right page press **View saved workbook**
+4. Validate that in the properties selector, your workspace is set on **sentinel-training-ws** and the subscription is the subscription that hosts your Microsoft Sentinel Lab.
 
 ![Select Microsoft incident creation rule](../Images/m5-workbook-validator.gif)
 
-1. As the subject of the investigation is the suspicious IP from North Korea. we want to see all the activity done by this IP so in the properties selector, switch on the **investigate by** to Entity.
-2. in the **Investigate IP Address** Tab, add the suspicious IP.
+5. As the subject of the investigation is the suspicious IP from North Korea. we want to see all the activity done by this IP so in the properties selector, switch on the **investigate by** to Entity.
+6. in the **Investigate IP Address** Tab, add the suspicious IP.
 
 ![Select Microsoft incident creation rule](../Images/m5-investigation-IP.gif)
 
-1. Under the activity Detail we see many successful logins from this IP with the user Adele, and also some failed logins to disabled account from last day/hours
-2. We copy the User adelev@m365x816222.onmicrosoft.com and validate it in our internal HR system, from the information we collected its seems that Adele is part of the security Red team, and this suspicious is part of the exercise.
-3. As the red team exercise discovered by us, the SOC manager ask us to add this IP to the whitelisting IP's, that we will not trigger incident on it any more.
-4. On the main incident page, select the relevant incident and press **Actions - > Create automation Rule**
+7. Under the activity Detail we see many successful logins from this IP with the user Adele, and also some failed logins to disabled account from last day/hours
+8. We copy the User adelev@m365x816222.onmicrosoft.com and validate it in our internal HR system, from the information we collected its seems that Adele is part of the security Red team, and this suspicious is part of the exercise.
+9. As the red team exercise discovered by us, the SOC manager ask us to add this IP to the whitelisting IP's, that we will not trigger incident on it any more.
+10. On the main incident page, select the relevant incident and press **Actions - > Create automation Rule**
 
 ![Select Microsoft incident creation rule](../Images/m5-automation.gif)
 
-1. In the new screen, we will see all the incident identifiers ( the IP, and the specific Analytics rule), as the Red Team exercise will finish in 48 hr., adapt the rule expiration till the end of the drill, and press **Apply**.
+11. In the new screen, we will see all the incident identifiers ( the IP, and the specific Analytics rule), as the Red Team exercise will finish in 48 hr., adapt the rule expiration till the end of the drill, and press **Apply**.
 
 ![Select Microsoft incident creation rule](../Images/m5-automation02.gif)
 
-1. As this incident consider as benign, we go back to the main incident page, and close the incident with the right classification.
+12. As this incident consider as benign, we go back to the main incident page, and close the incident with the right classification.
 
 ![Select Microsoft incident creation rule](../Images/M5-close-incident.gif) M5-close-incident
 
@@ -103,16 +103,16 @@ We have 2 options to open the workbook:
 
 ![incident1](../Images/incident1.png)
 
-1. Assign the incident to yourself and click _Apply_.
+3. Assign the incident to yourself and click _Apply_.
 
 ![incident2](../Images/incident2.png)
 
-1. Read the description of the incident. As you can see, one of the domain IOCs related to Solorigate attack has been found. In this case, domain **avsvmcloud.com** is involved.
-2. Optionally, you can click on _View full details_ to drill down to inspect the raw events that triggered this alert. For that, click on _Link to LA_ as shown in the screenshot:
+4. Read the description of the incident. As you can see, one of the domain IOCs related to Solorigate attack has been found. In this case, domain **avsvmcloud.com** is involved.
+5. Optionally, you can click on _View full details_ to drill down to inspect the raw events that triggered this alert. For that, click on _Link to LA_ as shown in the screenshot:
 
 ![incident2](../Images/incident-details.png)
 
-1. As you can see, the events were originated in Cisco Umbrella DNS, and the analytic rule uses _Microsoft Sentinel Information Model_ (ASIM) to normalize these events from any DNS source. Read more about [ASIM](https://docs.microsoft.com/azure/sentinel/normalization) and the [DNS schema](https://docs.microsoft.com/azure/sentinel/dns-normalization-schema).
+6. As you can see, the events were originated in Cisco Umbrella DNS, and the analytic rule uses _Microsoft Sentinel Information Model_ (ASIM) to normalize these events from any DNS source. Read more about [ASIM](https://docs.microsoft.com/azure/sentinel/normalization) and the [DNS schema](https://docs.microsoft.com/azure/sentinel/dns-normalization-schema).
 
 ![incident2](../Images/raw-events.png)
 
@@ -123,31 +123,31 @@ We have 2 options to open the workbook:
 
 ![incident3](../Images/incident3.png)
 
-1. In the search box, type "solorigate". Select _Solorigate Inventory check_ query and click on _Run Query_.
+3. In the search box, type "solorigate". Select _Solorigate Inventory check_ query and click on _Run Query_.
 
 ![incident4](../Images/incident4.png)
 
-1. You should see a total of three results. Click on _View Results_
+4. You should see a total of three results. Click on _View Results_
 
 ![incident5](../Images/incident5.png)
 
-1. As you can see, besides **ClienPC**, there's two additional computers where the malicious DLL and named pipe has been found. Bookmark all three records, selecting them and then click on _Add bookmark_.
+5. As you can see, besides **ClienPC**, there's two additional computers where the malicious DLL and named pipe has been found. Bookmark all three records, selecting them and then click on _Add bookmark_.
 
 ![incident6](../Images/incident6.png)
 
-1. In the window that appears click on _Create_ to create the bookmarks. As you can see entity mapping to already done for you.
+6. In the window that appears click on _Create_ to create the bookmarks. As you can see entity mapping to already done for you.
 
 ![incident7](../Images/incident7.png)
 
-1. Wait until the operation finishes and close the log search using the ✖ at the top right corner. This will land you in the Bookmarks tab inside Hunting menu, where you should see your two new bookmarks created. Select both of them and click on _Incident actions_ at the top and then _Add to existing incident_.
+7. Wait until the operation finishes and close the log search using the ✖ at the top right corner. This will land you in the Bookmarks tab inside Hunting menu, where you should see your two new bookmarks created. Select both of them and click on _Incident actions_ at the top and then _Add to existing incident_.
 
 ![incident8](../Images/incident8.png)
 
-1. From the list, pick the Solorigate incident that is assigned to you, and click _Add_.
+8. From the list, pick the Solorigate incident that is assigned to you, and click _Add_.
 
 ![incident9](../Images/incident9.png)
 
-1. At this point you can ask the Operations team to isolate the hosts affected by this incident.
+9. At this point you can ask the Operations team to isolate the hosts affected by this incident.
 
 ### Exercise 5: Add IOC to Threat Intelligence
 
@@ -158,11 +158,11 @@ Now, we will add the IP address related to the incident to our list of IOCs, so 
 
 ![incident10](../Images/incident10.png)
 
-1. Go to the _Threat Intelligence_ menu in Microsoft Sentinel and click _Add new_ at the top.
+3. Go to the _Threat Intelligence_ menu in Microsoft Sentinel and click _Add new_ at the top.
 
 ![incident11](../Images/incident11.png)
 
-1. Enter the following details in the _New indicator_ dialog, with _Valid from_ being today's date and _Valid until_ being two months after. Then click _Apply_.
+4. Enter the following details in the _New indicator_ dialog, with _Valid from_ being today's date and _Valid until_ being two months after. Then click _Apply_.
 
 ![incident12](../Images/incident12.png)
 
@@ -175,10 +175,10 @@ We will now prepare the incident for handover to forensics team.
 
 ![incident13](../Images/incident13.png)
 
-1. Enter information about all the steps performed. As an example:
+3. Enter information about all the steps performed. As an example:
 
 ![incident14](../Images/incident14.png)
 
-1. At this point you would hand over the incident to forensics team.
+4. At this point you would hand over the incident to forensics team.
 
 You can now continue to [**Module 5 - Hunting**](Module-5-Hunting.md)
