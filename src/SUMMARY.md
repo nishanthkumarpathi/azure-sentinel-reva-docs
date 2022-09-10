@@ -12,3 +12,4 @@
 * [Sample1: Multiple tenants and regions](Modules/Sample-1-Multiple-tenants-and-regions.md)
 * [Sample 2: Single tenant with multiple clouds](Modules/Sample-2-Single-tenant-with-multiple-clouds.md)
 * [Workspace Design Decision](Modules/Workspace-Design-Decision.md)
+* [KQL Demo](Modules/KQL-Demo-1.md)
