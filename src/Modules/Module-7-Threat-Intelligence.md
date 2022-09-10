@@ -24,7 +24,7 @@ This connector is currently in public preview and is based on Third-party Threat
 
 #### Task 2 : Threat intelligence TAXII connector
 
-For detailed prerequisites and instructions for this connector, you can visit our official doc on this matter [Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence-taxii)
+For detailed prerequisites and instructions for this connector, you can visit official doc on this matter [Connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence-taxii)
 
 In [Module 2](Module-2-Data-Connectors.md) we already enabled the TAXII connector in our lab environment, please refer to this module for more information.
 
