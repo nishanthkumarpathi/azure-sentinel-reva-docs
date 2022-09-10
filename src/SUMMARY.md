@@ -11,3 +11,4 @@
 * [M8: Azure Sentinel Solutions](Modules/Module-8-Azure-Sentinel-Solutions.md)
 * [Sample1: Multiple tenants and regions](Modules/Sample-1-Multiple-tenants-and-regions.md)
 * [Sample 2: Single tenant with multiple clouds](Modules/Sample-2-Single-tenant-with-multiple-clouds.md)
+* [Workspace Design Decision](Modules/Workspace-Design-Decision.md)
