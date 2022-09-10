@@ -1,4 +1,4 @@
-# Threat Intelligence
+# M7: Threat Intelligence
 
 This module will demonstrate how to use Microsoft Sentinel Threat Intelligence (TI) features and product integration points. During this module we rely on TI data that we ingested in [Module 2](Module-2-Data-Connectors.md), so please make sure you have completed that module. In this module we will also discover how to visualize and use this data as part of investigation and detection.
 
@@ -8,7 +8,7 @@ This module assumes that you completed [Module 1](Module-1-Setting-up-the-enviro
 
 ### Exercise 1: Threat Intelligence data connectors
 
-For detailed prerequisites and instructions for this connector, you can visit our official doc on this matter [Connect your threat intelligence platform to Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence-tip).
+For detailed prerequisites and instructions for this connector, you can visit official doc on this matter [Connect your threat intelligence platform to Microsoft Sentinel](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence-tip).
 
 #### Task 1 : Threat Intelligence Platforms (TIP) connector
 
