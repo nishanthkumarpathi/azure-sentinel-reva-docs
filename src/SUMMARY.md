@@ -9,3 +9,5 @@
 * [M6: Watchlists](Modules/Module-6-Watchlists.md)
 * [M7: Threat Intelligence](Modules/Module-7-Threat-Intelligence.md)
 * [M8: Azure Sentinel Solutions](Modules/Module-8-Azure-Sentinel-Solutions.md)
+* [Sample1: Multiple tenants and regions](Modules/Sample-1-Multiple-tenants-and-regions.md)
+* [Sample 2: Single tenant with multiple clouds](Modules/Sample-2-Single-tenant-with-multiple-clouds.md)
