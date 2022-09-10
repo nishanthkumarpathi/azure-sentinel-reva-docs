@@ -8,7 +8,7 @@ The following sections provide a full-text version of this decision tree, includ
 
 [Note #1](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note1) | [Note #2](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note2) | [Note #3](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note3) | [Note #4](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note4) | [Note #5](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note5) | [Note #6](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note6) | [Note #7](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note7) | [Note #8](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note8) | [Note #9](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note9) | [Note #10](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#note10)
 
-#### Step 1: New or existing workspace?
+### Step 1: New or existing workspace?
 
 Do you have an existing workspace that you can use for Microsoft Sentinel?
 
@@ -17,12 +17,12 @@ Do you have an existing workspace that you can use for Microsoft Sentinel?
   * **If you'll be ingesting **_**more**_** than 100 GB / day**, we recommend that you use a separate workspace for the sake of cost efficiency.
   * **If you'll be ingesting **_**less**_** than 100 GB / day**, continue with [step 2](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-2-keeping-data-in-different-azure-geographies) for further evaluation. Consider this question again when it arises in [step 5](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-5-collecting-any-non-soc-data).
 
-#### Step 2: Keeping data in different Azure geographies?
+### Step 2: Keeping data in different Azure geographies?
 
 * **If you have regulatory requirements to keep data in different Azure geographies**, use a separate Microsoft Sentinel workspace for each Azure region that has compliance requirements. For more information, see [Region considerations](https://docs.microsoft.com/en-us/azure/sentinel/best-practices-workspace-architecture#region-considerations).
 * **If you don't need to keep data in different Azure geographies**, continue with [step 3](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-3-do-you-have-multiple-azure-tenants).
 
-#### Step 3: Do you have multiple Azure tenants?
+### Step 3: Do you have multiple Azure tenants?
 
 * **If you have only a single tenant**, continue directly with [step 4](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-4-splitting-billing--charge-back).
 * **If you have multiple Azure tenants**, consider whether you're collecting logs that are specific to a tenant boundary, such as Office 365 or Microsoft 365 Defender.
@@ -39,7 +39,7 @@ Do you have an existing workspace that you can use for Microsoft Sentinel?
 
       If these disadvantages are not a concern for your organization, continue with [step 4](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-4-splitting-billing--charge-back) instead of using separate Microsoft Sentinel workspaces.
 
-#### Step 4: Splitting billing / charge-back?
+### Step 4: Splitting billing / charge-back?
 
 If you need to split your billing or charge-back, consider whether the usage reporting or manual cross-charge works for you.
 
@@ -51,7 +51,7 @@ If you need to split your billing or charge-back, consider whether the usage rep
 
     [Decision tree note #2](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#decision-tree): For more information, see [Microsoft Sentinel costs and billing](https://docs.microsoft.com/en-us/azure/sentinel/billing).
 
-#### Step 5: Collecting any non-SOC data?
+### Step 5: Collecting any non-SOC data?
 
 * **If you are not collecting any non-SOC data**, such as operational data, you can skip directly to [step 6](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-6-multiple-regions).
 *   **If you **_**are**_** collecting non-SOC data**, consider whether there are any overlaps, where the same data source is required for both SOC and non-SOC data.
@@ -68,7 +68,7 @@ If you need to split your billing or charge-back, consider whether the usage rep
     * **Yes**: Proceed with [step 6](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-6-multiple-regions) for further evaluation. For more information, see [note 3](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#combining-your-soc-and-non-soc-data).
     * **No**: We do not recommend using the same workspace for the sake of cost efficiency. Proceed with [step 6](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-6-multiple-regions) for further evaluation.
 
-**Combining your SOC and non-SOC data**
+### **Combining your SOC and non-SOC data**
 
 [Decision tree note #3](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#decision-tree): While we generally recommend that customers keep a separate workspace for their non-SOC data so that non-SOC data is not subject to Microsoft Sentinel costs, there may be situations where combining SOC and non-SOC data is less expensive than separating them.
 
@@ -93,7 +93,7 @@ This example is relevant only when both SOC and non-SOC data each have an ingest
 
 However, this recommendation for separate workspaces for non-SOC data comes from a purely cost-based perspective, and there are other key design factors to examine when determining whether to use a single or multiple workspaces. To avoid double ingestion costs, consider collecting overlapped data on a single workspace only with table-level Azure RBAC.
 
-#### Step 6: Multiple regions?
+### Step 6: Multiple regions?
 
 * **If you are collecting logs from Azure VMs in a **_**single**_** region only**, continue directly with [step 7](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-7-segregating-data-or-defining-boundaries-by-ownership).
 *   **If you are collecting logs from Azure VMs in **_**multiple**_** regions**, how concerned are you about the data egress cost?
@@ -119,7 +119,7 @@ However, this recommendation for separate workspaces for non-SOC data comes from
 
         Listed costs are fake and are used for illustrative purposes only. For up-to-date cost information, see the Microsoft Sentinel pricing calculator.
 
-#### Step 7: Segregating data or defining boundaries by ownership?
+### Step 7: Segregating data or defining boundaries by ownership?
 
 * **If you **_**do not**_** need to segregate data or define any ownership boundaries**, continue directly with [step 8](https://docs.microsoft.com/en-us/azure/sentinel/design-your-workspace-architecture#step-8-controlling-data-access-by-data-source--table).
 *   **If you **_**do**_** need to segregate data or define boundaries based on ownership**, does each data owner need to use the Microsoft Sentinel portal?
@@ -131,7 +131,7 @@ However, this recommendation for separate workspaces for non-SOC data comes from
 
     For more information, see [Permissions in Microsoft Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/roles).
 
-#### Step 8: Controlling data access by data source / table?
+### Step 8: Controlling data access by data source / table?
 
 * **If you **_**do not**_** need to control data access by source or table**, use a single Microsoft Sentinel workspace.
 *   **If you **_**do**_** need to control data access by source or table**, consider using [resource-context RBAC](https://docs.microsoft.com/en-us/azure/sentinel/resource-context-rbac) in the following situations:
