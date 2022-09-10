@@ -57,7 +57,6 @@ Below you can see all the [modules](./#Modules) that are part of this lab. Altho
 * [Create a Watchlist](Modules/Module-6-Watchlists.md#exercise-1-create-a-watchlist)
 * [Whitelist IP addresses in the analytics rule](Modules/Module-6-Watchlists.md#exercise-2-whitelist-ip-addresses-in-the-analytics-rule)
 
-<!-- 
 
 [**Module 7 - Threat Intelligence**](Modules/Module-7-Threat-Intelligence.md)
 
@@ -70,4 +69,4 @@ Below you can see all the [modules](./#Modules) that are part of this lab. Altho
 
 * [Explore Microsoft Sentinel Content hub](Modules/Module-8-Azure-Sentinel-Solutions.md#exercise-1-explore-azure-sentinel-content-hub)
 * [Deploy a new solution](Modules/Module-8-Azure-Sentinel-Solutions.md#exercise-2-deploy-a-new-solution)
-* [Review and enable deployed artifacts](Modules/Module-8-Azure-Sentinel-Solutions.md#exercise-3-review-and-enable-deployed-artifacts) -->
+* [Review and enable deployed artifacts](Modules/Module-8-Azure-Sentinel-Solutions.md#exercise-3-review-and-enable-deployed-artifacts)

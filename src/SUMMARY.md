@@ -7,8 +7,5 @@
 * [M4: Incident Management](Modules/Module-4-Incident-Management.md)
 * [M5: Hunting](Modules/Module-5-Hunting.md)
 * [M6: Watchlists](Modules/Module-6-Watchlists.md)
-
-<!---
 * [M7: Threat Intelligence](Modules/Module-7-Threat-Intelligence.md)
 * [M8: Azure Sentinel Solutions](Modules/Module-8-Azure-Sentinel-Solutions.md)
--->
