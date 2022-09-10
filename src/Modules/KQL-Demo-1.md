@@ -8,7 +8,7 @@ The [InsightsMetrics](https://docs.microsoft.com/en-us/azure/azure-monitor/refer
 
 A query is a data source (usually a table name), optionally followed by one or more pairs of the pipe character and some tabular operator. In this case, all records from the `InsightsMetrics` table are returned and then sent to the [count operator](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/countoperator). The `count` operator displays the results because the operator is the last command in the query.
 
-KustoCopy
+
 
 ```kusto
 InsightsMetrics | count
@@ -30,7 +30,7 @@ The [where](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/whe
 
 In addition to specifying a filter in your query by using the `TimeGenerated` column, you can specify the time range in Log Analytics. For more information, see [Log query scope and time range in Azure Monitor Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/scope).
 
-KustoCopy
+
 
 ```kusto
 AzureActivity
@@ -44,7 +44,7 @@ AzureActivity
 
 Use [project](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/projectoperator) to include only the columns you want. Building on the preceding example, let's limit the output to certain columns:
 
-KustoCopy
+
 
 ```kusto
 AzureActivity
@@ -59,7 +59,7 @@ AzureActivity
 
 [NetworkMonitoring](https://docs.microsoft.com/en-us/azure/azure-monitor/reference/tables/networkmonitoring) contains monitoring data for Azure virtual networks. Let's use the [take](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/takeoperator) operator to look at 10 random sample rows in that table. The [take](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/takeoperator) shows some rows from a table in no particular order:
 
-KustoCopy
+
 
 ```kusto
 NetworkMonitoring
@@ -73,7 +73,7 @@ NetworkMonitoring
 
 Instead of random records, we can return the latest five records by first sorting by time:
 
-KustoCopy
+
 
 ```kusto
 NetworkMonitoring
@@ -84,7 +84,7 @@ NetworkMonitoring
 
 You can get this exact behavior by instead using the [top](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/topoperator) operator:
 
-KustoCopy
+
 
 ```kusto
 NetworkMonitoring
@@ -100,7 +100,7 @@ The [extend](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/pr
 
 The [Perf](https://docs.microsoft.com/en-us/azure/azure-monitor/reference/tables/perf) table has performance data that's collected from virtual machines that run the Log Analytics agent.
 
-KustoCopy
+
 
 ```kusto
 Perf
@@ -117,7 +117,7 @@ The [summarize](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query
 
 The [SecurityEvent](https://docs.microsoft.com/en-us/azure/azure-monitor/reference/tables/securityevent) table contains security events like logons and processes that started on monitored computers. You can count how many events of each level occurred on each computer. In this example, a row is produced for each computer and level combination. A column contains the count of events.
 
-KustoCopy
+
 
 ```kusto
 SecurityEvent
@@ -132,7 +132,7 @@ You can aggregate by scalar values like numbers and time values, but you should 
 
 The [InsightsMetrics](https://docs.microsoft.com/en-us/azure/azure-monitor/reference/tables/insightsmetrics) table contains performance data that's organized according to insights from Azure Monitor for VMs and Azure Monitor for containers. The following query shows the hourly average processor utilization for multiple computers:
 
-KustoCopy
+
 
 ```kusto
 InsightsMetrics
@@ -149,7 +149,7 @@ The [render](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/re
 
 The following example shows the hourly average processor utilization for a single computer. It renders the output as a timechart.
 
-KustoCopy
+
 
 ```kusto
 InsightsMetrics
@@ -165,7 +165,7 @@ InsightsMetrics
 
 If you use multiple values in a `summarize by` clause, the chart displays a separate series for each set of values:
 
-KustoCopy
+
 
 ```kusto
 InsightsMetrics
@@ -185,7 +185,7 @@ What if you need to retrieve data from two tables in a single query? You can use
 
 The following example query uses a join to perform this calculation. The [distinct](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/distinctoperator) operator is used with `VMComputer` because details are regularly collected from each computer. As result, the table contains multiple rows for each computer. The two tables are joined using the `Computer` column. A row is created in the resulting set that includes columns from both tables for each row in `InsightsMetrics`, where the value in `Computer` has the same value in the `Computer` column in `VMComputer`.
 
-KustoCopy
+
 
 ```kusto
 VMComputer
@@ -204,7 +204,7 @@ VMComputer
 
 Use [let](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/letstatement) to make queries easier to read and manage. You can use this operator to assign the results of a query to a variable that you can use later. By using the `let` statement, the query in the preceding example can be rewritten as:
 
-KustoCopy
+
 
 ```kusto
 let PhysicalComputer = VMComputer
@@ -229,7 +229,7 @@ The following sections give examples of how to work with charts when using the K
 
 Begin by reviewing the number of computers per operating system during the past hour:
 
-KustoCopy
+
 
 ```kusto
 Heartbeat
@@ -251,7 +251,7 @@ Show the average and the 50th and 95th percentiles of processor time in bins of 
 
 The following query generates multiple series. In the results, you can choose which series to show in the timechart.
 
-KustoCopy
+
 
 ```kusto
 Perf
@@ -268,7 +268,7 @@ Select the **Line** chart display option:
 
 A reference line can help you easily identify whether the metric exceeded a specific threshold. To add a line to a chart, extend the dataset by adding a constant column:
 
-KustoCopy
+
 
 ```kusto
 Perf
@@ -284,7 +284,7 @@ Perf
 
 Multiple expressions in the `by` clause of `summarize` create multiple rows in the results. One row is created for each combination of values.
 
-KustoCopy
+
 
 ```kusto
 SecurityEvent
@@ -310,7 +310,7 @@ Cohort analysis tracks the activity of specific groups of users, known as _cohor
 
 The following example analyzes the number of activities users completed during five weeks after their first use of the service:
 
-KustoCopy
+
 
 ```kusto
 let startDate = startofweek(bin(datetime(2017-01-20T00:00:00Z), 1d));
@@ -380,7 +380,7 @@ Here's the output:
 
 The following example uses time-series analysis with the [series\_fir](https://docs.microsoft.com/en-us/azure/kusto/query/series-firfunction) function. You can use the `series_fir` function for sliding window computations. The sample application being monitored is an online store that tracks users' activity through custom events. The query tracks two types of user activities: `AddToCart` and `Checkout`. It defines an active user as a user who completed a checkout at least once on a specific day.
 
-KustoCopy
+
 
 ```kusto
 let endtime = endofday(datetime(2017-03-01T00:00:00Z));
@@ -427,7 +427,7 @@ Here's the output:
 
 The following example turns the preceding query into a reusable function. The example then uses the query to calculate rolling user stickiness. An active user in this query is defined as a user who completed a checkout at least once on a specific day.
 
-KustoCopy
+
 
 ```kusto
 let rollingDcount = (sliding_window_size: int, event_name:string)
