@@ -1,4 +1,4 @@
-# Data Connectors
+# M2: Data Connectors
 
 ## Objectives
 
@@ -63,20 +63,25 @@ This exercise shows you how to enable the Microsoft Defender for Cloud data conn
 
 ### Exercise 3: Enable Threat Intelligence TAXII data connector
 
-This exercise shows you how to enable the Threat Intelligence - TAXII data connector. This connector allows you to send threat indicators from TAXII servers to Microsoft Sentinel. Threat indicators can include IP addresses, domains, URLs, and file hashes.
+**Connecting Microsoft Sentinel to Pulsedive TAXII Server**
 
-**NOTE**: To do this exercise, your user must have the Security Reader role in the subscription of the logs you stream. If not done already, you will need to enable Azure Defender within Azure Security Center.
+To connect Microsoft Sentinel to Pulsedive’s TAXII Server, obtain the API Root, Collection ID, Username and Password from Pulsedive.
 
-1. Go to you Microsoft Sentinel workspace and select _Data Connectors_ under _Configuration_ section.
-2. In the data connectors screen, type _taxii_ in the search bar, select the _Threat intelligence - TAXII_ connector and click on _Open connector page_.
-3. In the Threat Intelligence - TAXII connector page, add the following information under _Configuration_ menu:
-   * **Friendly name (for server)**: RansomwareIPs
-   * **API root URL**: https://limo.anomali.com/api/v1/taxii2/feeds/
-   * **Collection ID**: 135
-   * **Username**: guest
-   * **Password**: guest
-   * **Import Indicators**: All available (review all available options)
-   * **Polling frequency**: Once an minute (review all available options)
+&#x20;
+
+Obtain access to Pulsedive via Microsoft Sentinel by following these steps:
+
+* Create a free Pulsedive account at [pulsedive.com/register](https://pulsedive.com/register)
+* Upgrade to the [Feed plan](https://pulsedive.com/api/taxii) that best suits your requirements
+  * More information on the Pulsedive Feed service can be found [here](https://pulsedive.com/about/feed)
+* Configure the TAXII client in Sentinel with the following information:
+  * API root: [https://pulsedive.com/taxii2/api/](https://pulsedive.com/taxii2/api/)
+  * Indicator collection ID: a5cffbfe-c0ff-4842-a235-cb3a7a040a37
+  * Username: taxii2
+  * Password: your API key, which can be found on your [account](https://pulsedive.com/account) page
+* Visit Pulsedive’s TAXII [documentation](https://pulsedive.com/api/taxii) to learn more
+
+_**Sample Screenshot**_
 
 ![taxii1](../Images/taxii11.png)
 
