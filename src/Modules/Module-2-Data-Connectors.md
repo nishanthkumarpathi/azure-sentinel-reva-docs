@@ -65,11 +65,13 @@ This exercise shows you how to enable the Microsoft Defender for Cloud data conn
 
 **Connecting Microsoft Sentinel to Pulsedive TAXII Server**
 
+1. Go to you Microsoft Sentinel workspace and select _Data Connectors_ under _Configuration_ section.
+2. In the data connectors screen, type _taxii_ in the search bar, select the _Threat intelligence - TAXII_ connector and click on _Open connector page_.
+3. In the Threat Intelligence - TAXII connector page, add the following information under _Configuration_ menu:
+
 To connect Microsoft Sentinel to Pulsedive’s TAXII Server, obtain the API Root, Collection ID, Username and Password from Pulsedive.
 
-&#x20;
-
-Obtain access to Pulsedive via Microsoft Sentinel by following these steps:
+&#x20;Obtain access to Pulsedive via Microsoft Sentinel by following these steps:
 
 * Create a free Pulsedive account at [pulsedive.com/register](https://pulsedive.com/register)
 * Upgrade to the [Feed plan](https://pulsedive.com/api/taxii) that best suits your requirements
@@ -86,6 +88,6 @@ _**Sample Screenshot**_
 ![taxii1](../Images/taxii11.png)
 
 1. Click _Add_ and wait until the operation completes.
-2. Click on _Next Steps_ at the top of the page and explore what content is available for this connector. In a few seconds, the ThreatIntelligenceIndicator will be populated with IOCs from Anomali's feed.
+2. Click on _Next Steps_ at the top of the page and explore what content is available for this connector. In a few seconds, the ThreatIntelligenceIndicator will be populated with IOCs from Pulsedive's feed.
 
 You can now continue to [**Module 3 - Analytics Rules**](broken-reference)
