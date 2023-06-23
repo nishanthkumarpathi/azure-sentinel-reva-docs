@@ -10,7 +10,7 @@ You are a Security Operations Analyst working at a company that is implementing 
 
 In this task, you will access a Log Analytics environment where you can practice writing KQL statements.
 
-1. Go to https://aka.ms/lademo in your browser. Login with the Administrator credentials.
+1. Go to [https://aka.ms/lademo](https://aka.ms/lademo) in your browser. Login with the Administrator credentials.
 2. Explore the available tables listed in the tab on the left side of the screen.
 3. In the query editor, enter the following query and select the **Run** button. You should see the query results in the bottom window.
 
