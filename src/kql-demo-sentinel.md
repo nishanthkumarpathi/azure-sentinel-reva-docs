@@ -6,16 +6,13 @@
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
-
-
 ## Task 1: Access the KQL testing area.
 
 In this task, you will access a Log Analytics environment where you can practice writing KQL statements.
 
-1. Login to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.
-2. Go to https://aka.ms/lademo in your browser. Login with the MOD Administrator credentials.
-3. Explore the available tables listed in the tab on the left side of the screen.
-4. In the query editor, enter the following query and select the **Run** button. You should see the query results in the bottom window.
+1. Go to https://aka.ms/lademo in your browser. Login with the Administrator credentials.
+2. Explore the available tables listed in the tab on the left side of the screen.
+3. In the query editor, enter the following query and select the **Run** button. You should see the query results in the bottom window.
 
 ```KQL
 SecurityEvent
