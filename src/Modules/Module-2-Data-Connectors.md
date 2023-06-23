@@ -61,7 +61,7 @@ This exercise shows you how to enable the Microsoft Defender for Cloud data conn
 
 1. Click on _Next Steps_ at the top of the page and explore what content is available for this connector.
 
-### Exercise 3: Enable Threat Intelligence TAXII data connector
+### Exercise 3: Enable Threat Intelligence TAXII data connector \[Until We have a License from the TAXII Vendor, we cant Complete this exercise ]
 
 **Connecting Microsoft Sentinel to Pulsedive TAXII Server**
 
